@@ -1,0 +1,202 @@
+
+
+.top-menu {
+    width: 100%;
+    max-width: 1233px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 0;
+    .img-parent {
+        width: 110px;
+        margin-right: 24px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.swiper-image {
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.img-parent {
+    width: 110px;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+$c-gradient-1: #94c11f;
+$c-gradient-2: #6fb746;
+$c-gradient-3: #44b05e;
+$c-gradient-4: #249a91;
+$c-gradient-5: #1a7cb2;
+$c-gradient-6: #4a58a3;
+$c-gradient-7: #622e88;
+$c-gradient-8: #541b6a;
+$c-gradient-9: #3f0e4d;
+
+.icontent {
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    max-width: 35%;
+    left: 0;
+    bottom: 0;
+    h1 {
+        font-size: 52px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    h5 {
+        font-size: 19px;
+        margin-top: 0;
+        font-weight: 400;
+    }
+    button {
+        border: none;
+        display: inline-block;
+        border-radius: 99px;
+        color: white;
+        position: relative;
+        z-index: 1;
+        font-size: 14px;
+        padding: 17px 35px;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &::before,
+        &::after {
+            content: ' ';
+            position: absolute;
+            // border-radius: 99px;
+        }
+        &::before {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -2;
+            background: #503b9a;
+            background: -moz-linear-gradient(left, #503b9a 0%, #269cc1 100%);
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%, #503b9a), color-stop(100%, #269cc1));
+            background: -webkit-linear-gradient(left, #503b9a 0%, #269cc1 100%);
+            background: -o-linear-gradient(left, #503b9a 0%, #269cc1 100%);
+            background: -ms-linear-gradient(left, #503b9a 0%, #269cc1 100%);
+            background: linear-gradient(to right, #503b9a 0%, #269cc1 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#503b9a', endColorstr='#269cc1', GradientType=1);
+        }
+        &::after {
+            top: 2px;
+            bottom: 2px;
+            left: 2px;
+            right: 2px;
+            background-color: black;
+            z-index: -1;
+            opacity: 1;
+            transition: all 0.6s ease-in-out;
+        }
+    }
+}
+
+.header-content {
+    position: relative;
+    display: flex;
+    justify-content: center; //   &:before {
+
+}
+
+@media all and (max-width: 960px) {
+    .top-menu {
+        justify-content: flex-start;
+        .img-parent {
+            order: 2;
+        }
+    }
+    .current-lg {
+        order: 3;
+        position: absolute;
+        right: 0;
+        margin-right: 12px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .icontent {
+        padding: 16px;
+        position: absolute;
+        background: #efefef;
+        background: rgba(255, 255, 255, 0.82);
+        right: 0;
+        max-width: 35%;
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+        span {
+            font-size: 11px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .icontent {
+        max-width: 100%;
+        bottom: 10%;
+        left: 0;
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 8px 0;
+        }
+        span {
+            font-size: 11px;
+        }
+    }
+}
+
+.current-lg {
+    form {
+        margin: 0;
+        select {
+            display: block;
+            padding: 8px;
+            border: 1px solid #fff;
+            outline: none;
+            font-weight: 600;
+            color: #fff;
+            background-color: transparent;
+            option {
+                color: #000;
+                &:option:first-child {
+                    display: none;
+                }
+            }
+            option:first-child {
+                display: none;
+                color: #fff;
+            }
+        }
+        select:focus {
+            border-color: rgba(82, 168, 236, 0.8);
+            outline: 0;
+            outline: thin dotted \9;
+            -moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+            box-shadow: 0 0 8px rgba(82, 168, 236, 0.6) !important;
+        }
+    }
+}
+

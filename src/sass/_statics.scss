@@ -1,0 +1,46 @@
+$white:#fff;
+$primary-color: #003e7e;
+$max-width-layout: 1233px;
+$max-width-content: 1133px;
+//$secondary-bg:#fbfbfb;
+//$secondary-bg:#fafafa;
+$secondary-bg: #fff; //#f5f7f9;  //old #f5f5f5;
+
+$primary-bg: #003e7e;
+
+$bottom-color:#d7dee4;
+
+$section-margin: 48px;
+
+%icard-content {
+  figure {
+    margin: 0;
+    img {
+      display: block;
+      border: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .card-content {
+    padding: 1.4em;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      font-weight: normal;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 22%;
+        padding: 4px;
+      }
+    }
+    h3 {
+      margin: 0;
+    }
+    p {
+      font-size: 95%;
+    }
+  }
+}
